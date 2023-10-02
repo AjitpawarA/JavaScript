@@ -1,5 +1,10 @@
 
 // Data types in js 
+// premitive and nonpremitive 
+
+
+
+// premitive 
 
 let a = 10;
 let b = "Ajit";
@@ -25,3 +30,18 @@ console.log(typeof e);
 
 console.log(f)
 console.log(typeof f);
+
+
+
+// non premitive 
+
+// functions 
+// objects 
+
+
+// functions 
+
+const myfun = function(){
+    console.log("hello world");
+};
+myfun;

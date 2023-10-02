@@ -43,3 +43,33 @@ console.log("type of bool = "+typeof bool);
 let date = new Date();
 let strdate = date.toString(); 
 console.log(strdate)
+
+
+
+
+// Non premitive 
+
+// objects
+// functions
+
+
+// object 
+
+let myobj={
+    fname : "Ajit",
+    lname : "Pawar",
+    age : 65
+}
+
+console.log(myobj.fname);
+
+
+
+
+
+// functions 
+
+let myfun = function(){      // this is a function
+    console.log("this is a function")
+}
+myfun();  // this is a function call 
