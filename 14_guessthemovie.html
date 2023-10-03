@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+
+// Guess the favourite movie 
+
+
+let favmovie = "Avatar";
+
+let guess=prompt("Guess the favourite movie ");
+
+while(favmovie!=guess){
+    if(guess==favmovie){
+        console.log("Congrats...")
+        break;
+    }
+    else if(guess=="quite"){
+        break;
+    }
+    else{
+        console.log("Wrong Guess;")
+    }
+};
+    </script>
+</head>
+<body>
+    <p>Guess the Movie</p>
+</body>
+</html>
