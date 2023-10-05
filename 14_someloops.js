@@ -42,3 +42,7 @@ let c = array2.filter((value)=>{
 })
 console.log("array elemnts using filter function :"+ c);
 
+
+
+
+
