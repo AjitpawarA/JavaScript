@@ -1,0 +1,33 @@
+
+<!-- 
+// Query Selectors 
+ -->
+
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+ <body>
+    <div>
+        <h1 id="heading">this is a heading </h1>
+        <p class="para">this is one of the para </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, ex?</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+ </body>
+ </html>
+
+
+ <script>
+    console.log(document.getElementById("heading"));
+
+    document.getElementById("heading").style.color="green";
+    // document.getElementsByClassName("para").style.color="yellow";
+
+    document.getElementById("heading").innerText="This is Not a heading"
+ </script>

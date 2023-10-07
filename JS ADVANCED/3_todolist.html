@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<style>
+    .container{
+        padding: 50px;
+    }
+
+    .element{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        padding: 50px;
+    }
+    .element li{
+        padding: 15px;
+
+    }
+    #lists{
+        padding: 50px;
+        height: 100%;
+    }
+    ul{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    #lists li{
+        padding: 10px;
+        font-size: 25px;
+        margin: 15px;
+    }
+</style>
+<body>
+    <main>
+        <div class="container">
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label">Name : </label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="john jenner">
+              </div>
+              <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">How are you ?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+
+              <button onclick="clickhandle()">Submit</button>
+
+        </div>
+
+
+        <div class="container">
+            <ul class="list-group" id="lists">
+                <li class="list-group-item" id="li"></li>
+              </ul>
+    
+        </div>
+    </main>
+</body>
+
+<script>
+    let name = document.getElementById("exampleFormControlInput1");
+    let comment= document.getElementById("exampleFormControlTextarea1");
+
+    function clickhandle(){
+        let element =document.getElementById("lists");
+        let nameval = name.value;
+        let commentval = comment.value;
+        console.log("name : "+ nameval+" comment : "+ commentval);
+        // element.className="element";
+
+        element.append(document.createTextNode(nameval,commentval))
+        document.querySelector(".list-group").append(element);
+    }
+
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

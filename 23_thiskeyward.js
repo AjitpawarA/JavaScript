@@ -61,5 +61,5 @@ let students =[
 
 
 let marks = students.map((marks)=>{
-    console.log(marks.getavg())
+    marks.getavg();
 })
