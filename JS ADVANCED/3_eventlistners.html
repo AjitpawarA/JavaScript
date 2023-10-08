@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btnmain">
+        clickme 
+    </button>
+
+    <p id="para">this is para</p>
+
+    <h1 class="heading">heading</h1>
+</body>
+
+<script>
+
+    let btnn = document.querySelector(".btnmain");
+    let p = document.querySelector("#para");
+    let h1 = document.querySelector("h1");
+
+    function clickhandle(){
+        console.dir(this.innerText);
+        this.style.color="blue";
+        this.style.padding="15px";
+    }
+
+    btnn.addEventListener("click", clickhandle);
+    p.addEventListener("click", clickhandle);
+    h1.addEventListener("click", clickhandle);
+
+
+</script>
+</html>

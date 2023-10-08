@@ -74,8 +74,14 @@
         console.log("name : "+ nameval+" comment : "+ commentval);
         // element.className="element";
 
-        element.append(document.createTextNode(nameval,commentval))
-        document.querySelector(".list-group").append(element);
+        let newname =(document.createTextNode(nameval));
+        let newcomment = document.createTextNode(commentval);
+
+
+        let a =document.querySelector(".list-group").value;
+        let b=document.querySelector(".list-group").value;
+
+        document.querySelector(".list-group").append(a+b);
     }
 
 
