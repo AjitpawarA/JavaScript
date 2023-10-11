@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>BMI-Calculator</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(33, 31, 31);
+            color: white;
+            width: 100%;
+            height: 100%;
+        }
+        .main{
+            width: 60%;
+            height: 100%;
+            border: 2px solid gray;
+            color: white;
+            border-radius: 10px;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            background-color: rgb(43, 39, 39);
+        }
+        .inputs{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 30px;
+        }
+        label{
+            font-size: 22px;
+            font-weight: bolder;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+        form{
+            width: 60%;
+        }
+        button{
+            width: 150px;
+            height: 50px;
+        }
+        #result{
+            width: 200px;
+            height: 70px;
+            font-size: 20px;
+        }
+        input{
+            background-color: rgb(50, 49, 49);
+            color: black;
+        
+        }
+        #accbtn{
+            width: 100%;
+        }
+        #accordionExample{
+            width: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="main container">
+        <h1>BMI-Calculator</h1>
+        <div class="inputs">
+
+
+            <form class="">
+                <div class="mb-3">
+                  <label for="weight" class="form-label">Weight</label>
+                  <input type="number" class="form-control" id="weight" aria-describedby="emailHelp" placeholder="Enter Your Weight in Kilograms">
+                </div>
+                <div class="mb-3">
+                    <label for="height" class="form-label">Height</label>
+                    <input type="number" class="form-control" id="height" aria-describedby="emailHelp" placeholder="Enter Your Height in Centimeters">
+                  </div><br>
+                <button type="button" class="btn btn-primary" id="calculate">-BMI-</button>
+              </form>
+              <br><br>
+              <button type="button" class="btn btn-primary" id="result">YOUR BMI IS</button>
+              <br><br>
+
+
+              <div class="accordion container" id="accordionExample">
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button id="accbtn" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Want to Know What is BMI ?
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong></strong> 
+                      Body Mass Index (BMI) is a simple formula, <br> <br> BMI = (weight in kilograms) / (height in meters)²,  <br>used to assess a person's weight in relation to their height. It categorizes individuals as underweight, normal weight, overweight, or obese. While useful for a quick assessment, it doesn't consider factors like muscle mass and should be used in conjunction with other health indicators and professional advice.
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+
+        </div>
+        </div>
+    </div>
+</body>
+<script src="bmi_cal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
