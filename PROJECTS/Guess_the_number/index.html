@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        *{
+           margin: 0;
+           padding: 0;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(35, 34, 34);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 50px;
+            align-items: center;
+            justify-content: center;
+        }
+        .game{
+            border: 2px solid white;
+            border-radius: 30px;
+            padding: 50px;
+            width: 60%;
+            display: flex;
+            align-content: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+        #inputfield{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="game container">
+            <h1>GUESS THE NUMBER</h1>
+            <div class="generate">
+                <p>click on the Generate button to Start the Game</p>
+                <button type="button" class="btn btn-outline-primary" id="generatebtn" >Generate</button>
+            </div>
+            <div class="mb-3" id="inputfield">
+                <input type="number" class="form-control" id="usernumber" aria-describedby="emailHelp" placeholder="Enter Your Guess Here">
+            </div>
+            <button type="button" class="btn btn-outline-primary" id="checkbtn">Submit</button>
+            <h1 id="correctans"></h1>
+
+            <p id="comment"></p>
+        </div>
+    </div>
+</body>
+<script src="./guess.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>
