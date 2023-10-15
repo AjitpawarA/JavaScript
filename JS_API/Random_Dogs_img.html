@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+
+    }
+    button{
+        width: 200px;
+        height: 60px;
+        background-color: pink;
+        color: black;
+        font-size: 30px;
+    }
+    button:hover{
+        cursor: pointer;
+    }
+    .image{
+        width: 50%;
+        height: 400px;
+        border: 1px solid black;
+        border-radius: 10px;
+        border-left: auto;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+
+    }
+</style>
+<body>
+    <div class="main">
+        <h1>Random DOG Image</h1><br>
+        <button>Click here !</button><br>
+        <div class="image">
+            <img src="./dog.jpg" alt="">
+        </div>
+
+    </div>
+</body>
+<script src="./random_dog.js"></script>
+</html>
