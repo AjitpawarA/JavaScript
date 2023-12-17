@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            color: aliceblue;
+        }
+        .main{
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(81, 139, 226);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .frame{
+            width: 30%;
+            height: 80%;
+            background-color: rgb(67, 97, 182);
+            border: 1px solid rgb(15, 15, 232);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .details{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+        }
+        .cityinput{
+            border-radius: 20px;
+            border: none;
+            height: 30px;
+            padding: 5px;
+            color: black;
+        }
+        button{
+            height: 30px;
+            width: 30px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            margin-left: 5px;
+        }
+        img{
+            width: 35%;
+        }
+        h2{
+            font-size: 35px;
+        }
+        h3{
+            font-size: 30px;
+        }
+        .details h3{
+            font-size: 20px;
+        }
+        .details p{
+            font-size: 18px;
+        }
+        button{
+            color: black;
+            transition: all 1s;
+        }
+        button:hover{
+            cursor: pointer;
+            background-color: gray;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <section class="page">
+        <div class="main">
+            <div class="frame">
+                <div class="inputs">
+                    <input type="text" class="cityinput" id="cityinputs" placeholder="Enter the city name ">
+                    <button onclick="checkWeather()">></button>
+                </div>
+                <img src="./mist.png" alt="">
+                <div class="cityntemp">
+                    <h2 class="cityname">Enter City Name Above</h2>
+                    <br>
+                    <h3><span id="tempraturedeg"></span><sup>0</sup>C</h3>
+                </div>
+               
+                <div class="details">
+                    <div class="humid">
+                        <h3>Humidity</h3><br>
+                        <p><span id="humidity"></span>%</p><br>
+                    </div>
+                    <div class="wind">
+                        <h3>Wind-Speed</h3><br>
+                        <p><span id="speed"></span>km/hr</p><br>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    const apikey ="a2cb3482a13d088fb032449ed1e84cfd"
+    const apiurl ="https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&units=metric"
+    const inputvalue = document.getElementById("cityinputs");
+
+    const cityname = document.getElementsByClassName("cityname")[0];
+    const temp = document.getElementById("tempraturedeg");
+    const weatherhumidity = document.getElementById("humidity");
+    const windsspeed = document.getElementById("speed");
+    
+
+    async function checkWeather(){
+
+        var citynamee=inputvalue.value;
+        const responce = await fetch(apiurl+`&q=${citynamee}`+`&appid=${apikey}`)
+        var data = await responce.json();
+
+        var temprature = data.main.temp;
+        let city = data.name;
+        let humid = data.main.humidity;
+        let speed = data.wind.speed;
+        cityname.innerHTML = city;
+        temp.innerHTML=temprature;
+        weatherhumidity.innerHTML=humid;
+        windsspeed.innerHTML=speed;
+
+
+    }
+
+
+</script>
+</html>
